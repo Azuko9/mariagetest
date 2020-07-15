@@ -1,75 +1,55 @@
 body{
+  z-index: -3;
   margin: 0;
   background-color: black;
-}
 
-body:before,
-body:after
-{
-    z-index: -2;
-    content:'';
-    position:fixed;
-     width:100vw;
-     height:100vh;
-    top:0; left: 0;
-    background-size:cover;
-    background-position:center center;
-}
-body:before
-body:after{
-  animation: slidebody 12s ease-in-out;
-  
-}
-body:after{
-  animation: slidebody 12s ease-in-out;
+
 }
 
 
-header{
+
+#mariage{
     z-index: -1;
     position: absolute;
     left: 0;
     height: 0;
     height: 100vh;
     width: 50%;
-    background: url(mariageNB.jpg) no-repeat;
+    background: url(mariage.jpg) no-repeat;
     background-size: cover;
+    filter: grayscale(1);
     animation: slidein 12s ease-in-out;
 }
 
 
+
+#product{
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  height: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url(fond-cote-production.jpg) no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+  animation: slidebody 12s ease-in-out;
+}
+
+
+
+
 @keyframes slidebody {
-  0%{background-image: url(fond-cote-productionNB.jpg);}
-  33% {background-image: url(fond-cote-productionNB.jpg);}
-  66% {background-image: url(fond-cote-production.jpg);}
-  100% {background-image: url(fond-cote-productionNB.jpg);}
+  0%{filter: grayscale(1);}
+  33% {filter: grayscale(1);}
+  66% {filter: grayscale(0);}
+  100% {filter: grayscale(1);}
 }
 @keyframes slidein {
-    0%{
-      background: url(mariageNB.jpg) no-repeat;
-      background-size: cover;
-      
-      width: 50%; 
-    }
-  
-    33% {
-      background: url(mariage.jpg) no-repeat;
-      background-size: cover;
-      width: 75%;
-    }
-    66% {
-      background: url(mariageNB.jpg) no-repeat;
-      background-size: cover;
-        width: 25%;
-
-      }
-
-    100% {
-      background: url(mariageNB.jpg) no-repeat;
-      background-size: cover;
-
-        width: 50%;
-      }
+  0%{filter: grayscale(1);}
+  33% {filter: grayscale(0);width: 85%;}
+  66% {filter: grayscale(1);width:15%}
+  100% {filter: grayscale(1);}
   }
 
 div{
@@ -83,6 +63,7 @@ div{
 }
 
 nav{background-color: rgba(61, 61, 61, 0.6);
+  width: 100vw;
     display: flex;
     justify-content: space-around;
 }
@@ -90,8 +71,9 @@ nav{background-color: rgba(61, 61, 61, 0.6);
 img{
     
     z-index: 1;
-    width: 160px;
-    margin: 10px;
+    width: 180px;
+    margin: 20px 0;
+    
 }
  button{
     width: 300px;
@@ -109,10 +91,11 @@ img{
  button:hover{
    opacity: 1;
    
+   
  }
 
 
- #mariage{
+ #mariagebutton{
      animation: opacitymariage 12s   ease-in-out;
      font-family: 'Dancing Script', cursive;
      font-size: 2.5em;
