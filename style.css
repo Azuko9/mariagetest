@@ -17,11 +17,11 @@ body:after
 }
 body:before
 body:after{
-  animation: slidebody 12s ease-in-out infinite;
+  animation: slidebody 12s ease-in-out;
   
 }
 body:after{
-  animation: slidebody 12s ease-in-out infinite;
+  animation: slidebody 12s ease-in-out;
 }
 
 
