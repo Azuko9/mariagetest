@@ -1,0 +1,162 @@
+body{
+  margin: 0;
+  background-color: black;
+}
+
+body:before,
+body:after
+{
+    z-index: -2;
+    content:'';
+    position:fixed;
+     width:100vw;
+     height:100vh;
+    top:0; left: 0;
+    background-size:cover;
+    background-position:center center;
+}
+body:before
+body:after{
+  animation: slidebody 12s ease-in-out infinite;
+  
+}
+body:after{
+  animation: slidebody 12s ease-in-out infinite;
+}
+
+
+header{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    height: 0;
+    height: 100vh;
+    width: 50%;
+    background: url(mariageNB.jpg) no-repeat;
+    background-size: cover;
+    animation: slidein 12s ease-in-out;
+}
+
+
+@keyframes slidebody {
+  0%{background-image: url(fond-cote-productionNB.jpg);}
+  33% {background-image: url(fond-cote-productionNB.jpg);}
+  66% {background-image: url(fond-cote-production.jpg);}
+  100% {background-image: url(fond-cote-productionNB.jpg);}
+}
+@keyframes slidein {
+    0%{
+      background: url(mariageNB.jpg) no-repeat;
+      background-size: cover;
+      
+      width: 50%; 
+    }
+  
+    33% {
+      background: url(mariage.jpg) no-repeat;
+      background-size: cover;
+      width: 75%;
+    }
+    66% {
+      background: url(mariageNB.jpg) no-repeat;
+      background-size: cover;
+        width: 25%;
+
+      }
+
+    100% {
+      background: url(mariageNB.jpg) no-repeat;
+      background-size: cover;
+
+        width: 50%;
+      }
+  }
+
+div{
+    
+    width: 100vw;
+    height: 100vh;
+    
+    text-align: center;
+    display: table-cell;
+  vertical-align: middle;
+}
+
+nav{background-color: rgba(61, 61, 61, 0.6);
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    
+    z-index: 1;
+    width: 160px;
+    margin: 10px;
+}
+ button{
+    width: 300px;
+     background-color: rgba(31, 10, 10, 0);
+     color: white;
+     opacity: 0.7;
+     font-family: 'Michroma', sans-serif;
+     font-size: 1.5em;
+     border: none;
+     animation: opacity 12s ease-in-out;
+     transition: 0.5s;
+
+ }
+
+ button:hover{
+   opacity: 1;
+   
+ }
+
+
+ #mariage{
+     animation: opacitymariage 12s   ease-in-out;
+     font-family: 'Dancing Script', cursive;
+     font-size: 2.5em;
+ }
+ @keyframes opacitymariage{
+    0%{
+      
+      opacity: 0; 
+    }
+  
+    33% {
+
+      opacity: 1;
+      
+    }
+    66% {
+
+        opacity: 0;
+      }
+
+    100% {
+
+        opacity: 0.7;
+      }
+  }
+
+  @keyframes opacity{
+    0%{
+      
+      opacity: 0; 
+    }
+  
+    33% {
+
+      opacity: 0;
+    }
+    66% {
+
+        opacity: 1;
+      }
+      100% {
+
+        opacity: 0.7;
+      }
+
+
+  }
