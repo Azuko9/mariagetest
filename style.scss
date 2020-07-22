@@ -1,0 +1,190 @@
+body{
+
+width: 100vw;
+height: 100vh;
+
+margin: 0;
+background-color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+section{
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  
+}
+
+#mariage{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    height: 0;
+    height: 100vh;
+    width: 50%;
+    background: url(mariage.jpg) no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+    animation: slidein 12s ease-in-out;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    &:hover{
+      filter: grayscale(0);
+      
+    }
+}
+
+
+
+
+
+#product{
+
+  left: 0;
+  height: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url(fond-cote-production.jpg) no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+  animation: slidebody 12s ease-in-out;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  transition: 1s;
+  &:hover{
+    filter: grayscale(0);
+  }
+}
+
+
+
+
+@keyframes slidebody {
+  0%{filter: grayscale(1);}
+  33% {filter: grayscale(1);}
+  66% {filter: grayscale(0);}
+  100% {filter: grayscale(1);}
+}
+@keyframes slidein {
+  0%{filter: grayscale(1);}
+  33% {filter: grayscale(0);width: 85%;}
+  66% {filter: grayscale(1);width:15%}
+  100% {filter: grayscale(1);}
+  }
+
+
+
+nav{
+  width: 100%;
+  height: 260px;
+  position: absolute;
+  background-color: rgba(61, 61, 61, 0.6);
+  display: flex;
+  align-items: center;
+  
+}
+#productnav{
+  width: 100vw;
+  height: 260px;
+  background-color: rgba(61, 61, 61, 0.6);
+  position: absolute;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  
+}
+
+img{
+
+    top: 50%;
+    z-index: 1;
+    height: 220px;
+    margin: 20px 0;
+    
+}
+ #productbutton{
+     background-color: rgba(31, 10, 10, 0);
+     opacity: 0.7;
+     font-family: 'Michroma', sans-serif;
+     font-size: 1.5em;
+     text-align: right;
+     border: none;
+     animation: opacity 12s ease-in-out;
+     transition: 0.5s;
+
+ }
+
+ #productbutton:hover{
+   opacity: 1;
+   
+   
+   
+ }
+
+a{
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  margin:0 2vw ;
+}
+ #mariagebutton{
+     animation: opacitymariage 12s   ease-in-out;
+     font-family: 'Dancing Script', cursive;
+     font-size: 2.5em;
+     opacity: 0.7;
+     transition: 0.5s;
+  
+ }
+
+ 
+ @keyframes opacitymariage{
+    0%{
+      
+      opacity: 0; 
+    }
+  
+    33% {
+
+      opacity: 1;
+      
+    }
+    66% {
+
+        opacity: 0;
+      }
+
+    100% {
+
+        opacity: 0.7;
+      }
+  }
+
+  @keyframes opacity{
+    0%{
+      
+      opacity: 0; 
+    }
+  
+    33% {
+
+      opacity: 0;
+    }
+    66% {
+
+        opacity: 1;
+      }
+      100% {
+
+        opacity: 0.7;
+      }
+
+
+  }
